@@ -12,65 +12,6 @@
             
         }
 
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background-color: #132743;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        input {
-            width: 90%;
-            padding: 8px;
-            margin: 8px 0;
-            border-radius: 5px;
-            border: none;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #00c2ff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0099cc;
-        }
-
-        .results {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #1f4068;
-            border-radius: 8px;
-        }
-    </style>
-</head>
-
-<body>
-
-    <h1>🚀 Rocket Launch Analyzer</h1>
-    <p>Check if your rocket can lift off and how high it can go.</p>
-
-    <div class="container">
-        
-        <h2>Rocket Information</h2>
-
-        <input type="number" id="rocketMass" placeholder="Rocket Dry Mass (kg)">
-        <input type="number" id="fuelMass" placeholder="Fuel Mass (kg)">
-        <input type="number" id="thrust" placeholder="Engine Thrust (Newtons)">
-        <input type="number" id="burnTime" placeholder="Burn Time (seconds)">
-
-        <button onclick="analyzeLaunch()">Analyze Launch</button>
-
-        <div class="results" id="results"></div>
-
-    </div>
-
-
 
 </body>
 </html>

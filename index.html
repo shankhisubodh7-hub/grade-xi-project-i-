@@ -69,41 +69,7 @@
 
     </div>
 
-<script>
-function analyzeLaunch() {
 
-    let rocketMass = parseFloat(document.getElementById("rocketMass").value);
-    let fuelMass = parseFloat(document.getElementById("fuelMass").value);
-    let thrust = parseFloat(document.getElementById("thrust").value);
-    let burnTime = parseFloat(document.getElementById("burnTime").value);
 
-    let gravity = 9.81;
-
-    let totalMass = rocketMass + fuelMass;
-    let weight = totalMass * gravity;
-
-    let liftOff;
-    if (thrust > weight) {
-        liftOff = "✅ Lift-Off Possible";
-    } else {
-        liftOff = "❌ Not Enough Thrust";
-    }
-
-    let acceleration = (thrust - weight) / totalMass;
-
-    let velocity = acceleration * burnTime;
-
-    let height = (velocity * velocity) / (2 * gravity);
-
-    document.getElementById("results").innerHTML = `
-        <h3>Results</h3>
-        <p><strong>Lift-Off Status:</strong> ${liftOff}</p>
-        <p><strong>Estimated Maximum Height:</strong> ${height.toFixed(2)} meters</p>
-    `;
-}
-</script>
-<input type="clear">
 </body>
 </html>
-
-

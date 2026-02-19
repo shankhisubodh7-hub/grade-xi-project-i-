@@ -35,5 +35,28 @@ border-radius: 6px;}
             </div><h1>🚀👩‍🚀ROCKET DISTANCE ANALYZER</h1>
             <button onclick="calculateDistance()">Calculate Delta-v</button>
             <div id="result"></div>
+            <script>
+        function calculateDistance() {
+            // Get input values
+            const dryMass = parseFloat(document.getElementById('rm').value);
+            const fuelMass = parseFloat(document.getElementById('rf').value);
+            const specificImpulse = parseFloat(document.getElementById('ri').value);
+            const flowRate = parseFloat(document.getElementById('fr').value); // optional for advanced calc
+
+            if (isNaN(dryMass) || isNaN(fuelMass) || isNaN(specificImpulse)) {
+                document.getElementById('result').textContent = "Please fill in all values!";
+                return;
+            }
+
+            const g0 = 9.81; // gravity m/s^2
+            const totalMass = dryMass + fuelMass;
+
+            // Tsiolkovsky rocket equation: Δv = Isp * g0 * ln(m0/mdry)
+            const deltaV = specificImpulse * g0 * Math.log(totalMass / dryMass);
+
+            document.getElementById('result').textContent = 
+                `Estimated Delta-v: ${deltaV.toFixed(2)} m/s`;
+        }
+    </script>
     </body>
 </html>

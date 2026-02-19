@@ -11,21 +11,28 @@ background-color:#0b1a2d;
         .box{ width:80%;
             padding:8px;
              max-width:600px;
-             margin:5px 8px;
+             margin:5px auto;
              background-color:#132743;
              border-radius:12px;}
 input { width:90%;
 padding:9px;
 margin:6px 0;
 border:none;
-border:none;
 border-radius: 6px;}
-             </style></head>
-            <div class="box><body>
+   button{ padding:10px 20px;
+          border-radius:6px;
+          border:1px blue;
+          bacground-colour:#0f2a4d;
+          margin:auto;}
+        #result{ margin:auto;}
+    </style></head>
+        <body>    <div class="box">
              <input type="number" id="rm" name="mass" placeholder="enter dry mass of rocket" required><br>
              <input type="number" id="rf" name="fuel" placeholder="enter  mass of fuel" required><br>
              <input type="number" id="ri" name="impulse" placeholder="enter engine effeciency" required><br>
              <input type="number" id="fr" name="rate" placeholder="enter flow rate of rocket" required><br>
-             </div><h1>🚀👩‍🚀ROCKET DISTANCE ANALYZER</h1>
+            </div><h1>🚀👩‍🚀ROCKET DISTANCE ANALYZER</h1>
+            <button onclick="calculateDistance()">Calculate Delta-v</button>
+            <div id="result"></div>
     </body>
 </html>

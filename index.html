@@ -1,29 +1,31 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title> Launch RocketAnalyzer</title>                  
     <style>
-        body {
-          font-family:"Times new roman",sans-serif;
-            background-color:#0b1a2d    ;
-            color:white;
-            text-align:center;
-            padding:10px
-        }             
-        .charlie{ max-width: 600px; 
-         margin: auto;
-         background-color: #132743; 
-         padding: 20px;
-        }    
-    </style>  
-</head> <body>
- <h1>🚀👩‍🚀 launcher analyzer </h1>
-    <div class="charlie">
-<input type="number" id="rm" placeholder="enter the rocket mass"><br>
-<input type="number" id="sp" placeholder="enter the specific impulse/engine efficiency"><br>
-<input type="number" id="mp" placeholder="enter dry mass of rocket structure"><br>
-<input type="number" id="mf" placeholder="enter mass of fuel">
-    </div>
-</body>
-</html>
+       body{
+font-family:"Times New Roman",sans-serif;
+background-color:#0b1a2d;
+           color:white;
+           padding:10px;
+           text-align:center;}
+        .box{ width:80%;
+            padding:8px;
+             max-width:600px;
+             margin:5px 8px;
+             background-color:#132743;
+             border-radius:12px;}
+input { width:90%;
+padding:9px;
+margin:6px auto;
+border:none;
+display :block
+border-radius: 6px;}
+             </style></head>
+            <div class="box><body>
+             <input type="number" id="rm" name="mass" placeholder="enter dry mass of rocket" required><br>
+             <input type="number" id="rf" name="fuel" placeholder="enter  mass of fuel" required><br>
+             <input type="number" id="ri" name="impulse" placeholder="enter engine effeciency" required><br>
+             <input type="number" id="fr" name="rate" placeholder="enter flow rate of rocket" required><br>
+             </div><h1>🚀👩‍🚀ROCKET DISTANCE ANALYZER</h1>
+    </body>
 </html>

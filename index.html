@@ -37,7 +37,8 @@ border-radius: 6px;}
             <button onclick="calculateDistance()">Calculate Delta-v</button>
             <div id="result"></div>
             <script>
-  function calculateDistance() {
+
+function calculateDistance() {
     const dryMass = parseFloat(document.getElementById('rm').value);
     const fuelMass = parseFloat(document.getElementById('rf').value);
     const specificImpulse = parseFloat(document.getElementById('ri').value);
@@ -54,8 +55,7 @@ border-radius: 6px;}
     const height = (deltaV * deltaV) / (2 * g0);
 
     document.getElementById('result').textContent = 
-        `Estimated Δv: ${deltaV.toFixed(2)} m/s
-Estimated vertical distance: ${height.toFixed(2)} m`;
+        `The rocket's maximum vertical distance is approximately ${height.toFixed(2)} meters.`;
 }
 
     </script>

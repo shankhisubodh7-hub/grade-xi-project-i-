@@ -37,27 +37,27 @@ border-radius: 6px;}
             <button onclick="calculateDistance()">Calculate Delta-v</button>
             <div id="result"></div>
             <script>
-        function calculateDistance() {
-            // Get input values
-            const dryMass = parseFloat(document.getElementById('rm').value);
-            const fuelMass = parseFloat(document.getElementById('rf').value);
-            const specificImpulse = parseFloat(document.getElementById('ri').value);
-            const flowRate = parseFloat(document.getElementById('fr').value); // optional for advanced calc
+  function calculateDistance() {
+    const dryMass = parseFloat(document.getElementById('rm').value);
+    const fuelMass = parseFloat(document.getElementById('rf').value);
+    const specificImpulse = parseFloat(document.getElementById('ri').value);
 
-            if (isNaN(dryMass) || isNaN(fuelMass) || isNaN(specificImpulse)) {
-                document.getElementById('result').textContent = "Please fill in all values!";
-                return;
-            }
+    if (isNaN(dryMass) || isNaN(fuelMass) || isNaN(specificImpulse)) {
+        document.getElementById('result').textContent = "Please fill in all values!";
+        return;
+    }
 
-            const g0 = 9.81; // gravity m/s^2
-            const totalMass = dryMass + fuelMass;
+    const g0 = 9.81;
+    const totalMass = dryMass + fuelMass;
 
-            // Tsiolkovsky rocket equation: Δv = Isp * g0 * ln(m0/mdry)
-            const deltaV = specificImpulse * g0 * Math.log(totalMass / dryMass);
+    const deltaV = specificImpulse * g0 * Math.log(totalMass / dryMass);
+    const height = (deltaV * deltaV) / (2 * g0);
 
-            document.getElementById('result').textContent = 
-                `Estimated Delta-v: ${deltaV.toFixed(2)} m/s`;
-        }
+    document.getElementById('result').textContent = 
+        `Estimated Δv: ${deltaV.toFixed(2)} m/s
+Estimated vertical distance: ${height.toFixed(2)} m`;
+}
+
     </script>
     </body>
 </html>
